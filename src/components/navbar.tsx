@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import { auth } from "../config/firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { signOut } from "firebase/auth";
+import { Link } from 'react-router-dom';
+import { auth } from '../config/firebase';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { signOut } from 'firebase/auth';
 
 export const Navbar = () => {
    const [user] = useAuthState(auth);
@@ -26,7 +26,7 @@ export const Navbar = () => {
                <>
                   <p> {user?.displayName} </p>
                   <img
-                     src={user?.photoURL || ""}
+                     src={user?.photoURL || ''}
                      width="20"
                      height="20"
                      alt="Current User"

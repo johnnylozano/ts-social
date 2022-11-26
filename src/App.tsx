@@ -1,9 +1,9 @@
-import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Main } from "./pages/main";
-import { Login } from "./pages/login";
-import { Navbar } from "./components/navbar";
-import { CreatePost } from "./pages/create-post/create-post";
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Main } from './pages/main';
+import { Login } from './pages/login';
+import { Navbar } from './components/navbar';
+import { CreatePost } from './pages/create-post/create-post';
 
 function App() {
    return (

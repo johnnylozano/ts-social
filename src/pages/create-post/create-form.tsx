@@ -1,6 +1,6 @@
-import { useForm } from "react-hook-form";
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 interface CreateFormData {
    title: string;
@@ -9,8 +9,8 @@ interface CreateFormData {
 
 export const CreateForm = () => {
    const schema = yup.object().shape({
-      title: yup.string().required("You must add a title."),
-      description: yup.string().required("You must add a description."),
+      title: yup.string().required('You must add a title.'),
+      description: yup.string().required('You must add a description.'),
    });
 
    const {
@@ -27,10 +27,10 @@ export const CreateForm = () => {
 
    return (
       <form onSubmit={handleSubmit(onCreatePost)}>
-         <input type="text" placeholder="Title..." {...register("title")} />
-         <p style={{ color: "red" }}>{errors.title?.message}</p>
-         <textarea placeholder="Description..." {...register("description")} />
-         <p style={{ color: "red" }}>{errors.description?.message}</p>
+         <input type="text" placeholder="Title..." {...register('title')} />
+         <p style={{ color: 'red' }}>{errors.title?.message}</p>
+         <textarea placeholder="Description..." {...register('description')} />
+         <p style={{ color: 'red' }}>{errors.description?.message}</p>
          <input type="submit" />
       </form>
    );
