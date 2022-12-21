@@ -368,6 +368,12 @@ main .container .left .profile-photo {
    }
 }
 
+@media screen and (min-width: 548px) {
+   .navbar .create .btn {
+      display: none;
+   }
+}
+
 @media screen and (max-width: 480px) {
    .left {
       width: 4rem;
