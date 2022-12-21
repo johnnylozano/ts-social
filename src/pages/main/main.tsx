@@ -36,48 +36,50 @@ export const Main = () => {
       //       <Post post={post} />
       //    ))}
       // </div>
-      <div className="container">
-         {/* LEFT */}
-         <div className="left">
-            <a href="#" className="profile">
-               <img
-                  className="profile-photo"
-                  src={user?.photoURL || ''}
-                  alt=""
-               />
-               <div className="handle">
-                  <h4>{user?.displayName}</h4>
-                  <p className="text-muted">@{user?.displayName}</p>
+      <main>
+         <div className="container">
+            {/* LEFT */}
+            <div className="left">
+               <a href="#" className="profile">
+                  <img
+                     className="profile-photo"
+                     src={user?.photoURL || ''}
+                     alt=""
+                  />
+                  <div className="handle">
+                     <h4>{user?.displayName}</h4>
+                     <p className="text-muted">@{user?.displayName}</p>
+                  </div>
+               </a>
+
+               {/* SIDEBAR */}
+
+               <div className="sidebar">
+                  <a href="#" className="menu-item">
+                     <span className="centered-icon">
+                        <AiOutlineHome />
+                     </span>
+                     <h3>Home</h3>
+                  </a>
+                  <a href="#" className="menu-item">
+                     <span className="centered-icon">
+                        <AiOutlineCompass />
+                     </span>
+                     <h3>Explore</h3>
+                  </a>
+                  <a href="#" className="menu-item">
+                     <span className="centered-icon">
+                        <AiOutlineBell />
+                     </span>
+                     <h3>Notifications</h3>
+                  </a>
                </div>
-            </a>
-
-            {/* SIDEBAR */}
-
-            <div className="sidebar">
-               <a href="#" className="menu-item">
-                  <span>
-                     <AiOutlineHome />
-                  </span>
-                  <h3>Home</h3>
-               </a>
-               <a href="#" className="menu-item">
-                  <span>
-                     <AiOutlineCompass />
-                  </span>
-                  <h3>Explore</h3>
-               </a>
-               <a href="#" className="menu-item">
-                  <span>
-                     <AiOutlineBell />
-                  </span>
-                  <h3>Notifications</h3>
-               </a>
             </div>
+            {/* MIDDLE */}
+            <div className="middle"></div>
+            {/* RIGHT */}
+            <div className="right"></div>
          </div>
-         {/* MIDDLE */}
-         <div className="middle"></div>
-         {/* RIGHT */}
-         <div className="right"></div>
-      </div>
+      </main>
    );
 };

@@ -11,6 +11,8 @@ export const Navbar = () => {
       await signOut(auth);
    };
 
+   let iconStyle = { color: '#000' };
+
    return (
       // <div className="navbar">
       //    <div className="links">
@@ -41,8 +43,10 @@ export const Navbar = () => {
          <div className="container">
             <h2 className="logo">Konnect</h2>
             <div className="search-bar">
-               <AiOutlineSearch color="#000" />
-               <input type="search" placeholder="Search" />
+               <span className="search-icon">
+                  <AiOutlineSearch fill="#000" />
+                  <input type="search" placeholder="Search" />
+               </span>
             </div>
             <div className="create">
                <label className="btn btn-primary" htmlFor="create-post">
