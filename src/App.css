@@ -255,6 +255,8 @@ main .container .left .profile-photo {
 .create-post__text {
    display: flex;
    flex-direction: column;
+   flex: 1;
+   margin-inline: 0.8rem;
 }
 
 .create-post__title {
@@ -354,11 +356,7 @@ main .container .left .profile-photo {
    }
 }
 
-@media screen and (max-width: 548px) {
-   nav .search-bar {
-      display: none;
-   }
-
+@media screen and (max-width: 600px) {
    .middle .create-post {
       display: none;
    }
@@ -368,7 +366,13 @@ main .container .left .profile-photo {
    }
 }
 
-@media screen and (min-width: 548px) {
+@media screen and (max-width: 568px) {
+   nav .search-bar {
+      display: none;
+   }
+}
+
+@media screen and (min-width: 600px) {
    .navbar .create .btn {
       display: none;
    }
