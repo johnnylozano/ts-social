@@ -1,92 +1,4 @@
-/* .App {
-   text-align: center;
-}
-
-body {
-   background-color: #282c34;
-   color: #e3e3e3;
-   margin: 0;
-   padding: 0;
-   font-family: Arial, Helvetica, sans-serif;
-}
-
-.navbar {
-   width: 100%;
-   height: 80px;
-   background-color: #1b4674;
-   display: flex;
-   align-items: center;
-   justify-content: flex-end;
-}
-
-.navbar .links {
-   text-align: center;
-   margin-right: 50px;
-}
-
-.links a {
-   color: #fff;
-   text-decoration: none;
-   border-bottom: 3px solid #fff;
-   padding-bottom: 2px;
-   margin: 10px;
-}
-
-.navbar .user {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-right: 50px;
-}
-
-.user p {
-   font-size: 15px;
-   margin-right: 10px;
-   color: white;
-}
-.user img {
-   font-size: 15px;
-   border-radius: 50%;
-}
-
-input,
-textarea {
-   font-family: 'Nunito', sans-serif;
-}
-
-.create-post {
-   width: 100%;
-   height: auto;
-   display: flex;
-   justify-content: center;
-}
-form {
-   margin-top: 50px;
-   padding: 30px 20px;
-   width: 320px;
-   border-radius: 7px;
-   background-color: white;
-   backdrop-filter: blur(5px);
-   background-color: #1b4674;
-   overflow: hidden;
-}
-
-input,
-textarea {
-   padding: 8px 10px;
-   margin: 3px 8px 16px 8px;
-   background-color: rgba(222, 239, 248, 0.877);
-   border: 0px transparent;
-   border-radius: 5px;
-   color: #1b4674;
-   font-size: 16px;
-   z-index: 1;
-}
-
-.submitForm:hover {
-   cursor: pointer;
-} */
-
+/* === VARIABLES === */
 :root {
    --clr-white: hsl(252, 30%, 100%);
    --clr-light: hsl(252, 30%, 95%);
@@ -147,6 +59,8 @@ img {
    width: 100%;
 }
 
+/* === BUTTONS === */
+
 .btn {
    display: inline-block;
    padding: var(--btn-padding);
@@ -190,7 +104,7 @@ img {
    color: var(--clr-gray);
 }
 
-/* NAVBAR */
+/* === NAVBAR === */
 .navbar {
    width: 100%;
    background: var(--clr-dark);
@@ -240,7 +154,7 @@ img {
    gap: 2rem;
 }
 
-/* LOGIN */
+/* === LOGIN === */
 
 .login {
    display: grid;
@@ -256,7 +170,7 @@ img {
    margin-top: 1.5rem;
 }
 
-/* MAIN */
+/* === MAIN === */
 
 .main {
    position: relative;
@@ -270,7 +184,7 @@ main .container {
    position: relative;
 }
 
-/* LEFT */
+/* === LEFT === */
 
 main .container .left {
    height: max-content;
@@ -292,7 +206,7 @@ main .container .left .profile-photo {
    min-width: 1.5rem;
 }
 
-/* SIDEBAR */
+/* === SIDEBAR === */
 
 .left .sidebar {
    margin-top: 1rem;
@@ -326,7 +240,7 @@ main .container .left .profile-photo {
    font-size: 1rem;
 }
 
-/* CREATE POST */
+/* === CREATE POST === */
 .create-post {
    width: 100%;
    display: flex;
@@ -365,7 +279,7 @@ main .container .left .profile-photo {
    margin-right: 1rem;
 }
 
-/* FEEDS */
+/* === FEED === */
 
 .middle .feeds .feed {
    background-color: var(--clr-dark);
@@ -432,7 +346,7 @@ main .container .left .profile-photo {
    margin-left: 0.5rem;
 }
 
-/* Media Queries */
+/* === Media Queries === */
 
 @media screen and (max-width: 1100px) {
    .container {
