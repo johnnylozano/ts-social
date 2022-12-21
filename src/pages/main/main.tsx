@@ -39,11 +39,6 @@ export const Main = () => {
       getPosts();
    }, []);
    return (
-      // <div>
-      //    {postsList?.map((post) => (
-      //       <Post post={post} />
-      //    ))}
-      // </div>
       <main>
          {!user ? (
             <Login />

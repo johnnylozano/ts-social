@@ -42,13 +42,6 @@ export const CreateForm = () => {
    };
 
    return (
-      // <form onSubmit={handleSubmit(onCreatePost)}>
-      //    <input type="text" placeholder="Title..." {...register('title')} />
-      //    <p style={{ color: 'red' }}>{errors.title?.message}</p>
-      //    <textarea placeholder="Description..." {...register('description')} />
-      //    <p style={{ color: 'red' }}>{errors.description?.message}</p>
-      //    <input type="submit" className="submitForm" />
-      // </form>
       <form onSubmit={handleSubmit(onCreatePost)} className="create-post">
          <div className="profile-photo">
             <img src={user?.photoURL || ''} alt="" />

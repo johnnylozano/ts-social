@@ -12,31 +12,6 @@ export const Navbar = () => {
    };
 
    return (
-      // <div className="navbar">
-      //    <div className="links">
-      //       <Link to="/">Home</Link>
-      //       {!user ? (
-      //          <Link to="/login">Login</Link>
-      //       ) : (
-      //          <Link to="/createpost">Create Post</Link>
-      //       )}
-      //    </div>
-
-      //    <div className="user">
-      //       {user && (
-      //          <>
-      //             <p> {user?.displayName} </p>
-      //             <img
-      //                src={user?.photoURL || ''}
-      //                width="20"
-      //                height="20"
-      //                alt="Current User"
-      //             />
-      //             <button onClick={signUserOut}>Log Out</button>
-      //          </>
-      //       )}
-      //    </div>
-      // </div>
       <nav className="navbar">
          <div className="container">
             <a href="/">
