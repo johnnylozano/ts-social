@@ -378,7 +378,7 @@ main .container .left .profile-photo {
       grid-template-columns: 3rem auto;
    }
 
-   main .container .left .profile {
+   main .container .left .handle {
       display: none;
    }
 
