@@ -11,8 +11,6 @@ export const Navbar = () => {
       await signOut(auth);
    };
 
-   let iconStyle = { color: '#000' };
-
    return (
       // <div className="navbar">
       //    <div className="links">
@@ -41,25 +39,36 @@ export const Navbar = () => {
       // </div>
       <nav className="navbar">
          <div className="container">
-            <h2 className="logo">Konnect</h2>
-            <div className="search-bar">
-               <span className="search-icon">
-                  <AiOutlineSearch fill="#000" />
-                  <input type="search" placeholder="Search" />
-               </span>
-            </div>
-            <div className="create">
-               <label className="btn btn-primary" htmlFor="create-post">
-                  Create
-               </label>
-               <div className="profile-picture">
-                  <img
-                     className="profile-photo"
-                     src={user?.photoURL || ''}
-                     alt=""
-                  />
+            <a href="/">
+               <h2 className="logo">Konnect</h2>
+            </a>
+            {user && (
+               <div className="search-bar">
+                  <span className="search-icon">
+                     <AiOutlineSearch fill="#000" />
+                     <input type="search" placeholder="Search" />
+                  </span>
                </div>
-            </div>
+            )}
+            {!user && (
+               <Link to="/login" className="btn btn-primary">
+                  Login
+               </Link>
+            )}
+            {user && (
+               <div className="create">
+                  <Link className="btn btn-primary" to="/createpost">
+                     Create
+                  </Link>
+                  <div className="profile-picture">
+                     <img
+                        className="profile-photo"
+                        src={user?.photoURL || ''}
+                        alt=""
+                     />
+                  </div>
+               </div>
+            )}
          </div>
       </nav>
    );

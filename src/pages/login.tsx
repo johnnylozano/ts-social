@@ -1,6 +1,7 @@
 import { auth, provider } from '../config/firebase';
 import { signInWithPopup } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import { AiFillGoogleCircle } from 'react-icons/ai';
 
 export const Login = () => {
    const navigate = useNavigate();
@@ -11,9 +12,11 @@ export const Login = () => {
       navigate('/');
    };
    return (
-      <div>
-         <p>Sign In With Google to Continue</p>
-         <button onClick={signInWithGoogle}>Sign In With Google</button>
+      <div className="login">
+         <p className="login__prompt">Sign In With Google to Continue</p>
+         <button className="login-btn" onClick={signInWithGoogle}>
+            <AiFillGoogleCircle size={64} />
+         </button>
       </div>
    );
 };

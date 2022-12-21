@@ -11,6 +11,10 @@ import { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth, db } from '../../config/firebase';
 import { IPost } from './main';
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
+import profile10 from '../../assets/img/profile-10.jpg';
+import profile4 from '../../assets/img/profile-4.jpg';
+import profile15 from '../../assets/img/profile-15.jpg';
 
 interface Props {
    post: IPost;
@@ -85,19 +89,61 @@ export const Post = (props: Props) => {
       getLikes();
    }, []);
    return (
-      <div>
-         <div className="title">
-            <h1>{post.title}</h1>
-         </div>
-         <div className="body">
-            <p>{post.description}</p>
-         </div>
-         <div className="footer">
-            <p>@{post.username}</p>
-            <button onClick={hasUserLiked ? removeLike : addLike}>
-               {hasUserLiked ? <>&#128078;</> : <>&#128077;</>}
-            </button>
-            {likes && <p>Likes: {likes?.length}</p>}
+      // <div>
+      //    <div className="title">
+      //       <h1>{post.title}</h1>
+      //    </div>
+      //    <div className="body">
+      //       <p>{post.description}</p>
+      //    </div>
+      //    <div className="footer">
+      //       <p>@{post.username}</p>
+      //       <button onClick={hasUserLiked ? removeLike : addLike}>
+      //          {hasUserLiked ? <>&#128078;</> : <>&#128077;</>}
+      //       </button>
+      //       {likes && <p>Likes: {likes?.length}</p>}
+      //    </div>
+      // </div>
+      <div className="feeds">
+         <div className="feed">
+            <div className="head">
+               <div className="user">
+                  <h3>@{post.username}</h3>
+               </div>
+            </div>
+
+            <div className="caption">
+               <h1>{post.title}</h1>
+               <p>{post.description}</p>
+            </div>
+
+            <div className="action-buttons">
+               <div className="interaction-buttons">
+                  <button
+                     className="like-btn"
+                     onClick={hasUserLiked ? removeLike : addLike}
+                  >
+                     {hasUserLiked ? (
+                        <AiFillHeart fill="red" />
+                     ) : (
+                        <AiOutlineHeart />
+                     )}
+                  </button>
+               </div>
+            </div>
+
+            <div className="liked-by">
+               <span>
+                  <img src={profile10} alt="" />
+               </span>
+               <span>
+                  <img src={profile4} alt="" />
+               </span>
+               <span>
+                  <img src={profile15} alt="" />
+               </span>
+               {likes && <p>Liked by {likes?.length} others</p>}
+            </div>
          </div>
       </div>
    );

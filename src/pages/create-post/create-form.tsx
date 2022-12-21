@@ -38,15 +38,39 @@ export const CreateForm = () => {
       });
 
       navigate('/');
+      window.location.reload();
    };
 
    return (
-      <form onSubmit={handleSubmit(onCreatePost)}>
-         <input type="text" placeholder="Title..." {...register('title')} />
-         <p style={{ color: 'red' }}>{errors.title?.message}</p>
-         <textarea placeholder="Description..." {...register('description')} />
-         <p style={{ color: 'red' }}>{errors.description?.message}</p>
-         <input type="submit" className="submitForm" />
+      // <form onSubmit={handleSubmit(onCreatePost)}>
+      //    <input type="text" placeholder="Title..." {...register('title')} />
+      //    <p style={{ color: 'red' }}>{errors.title?.message}</p>
+      //    <textarea placeholder="Description..." {...register('description')} />
+      //    <p style={{ color: 'red' }}>{errors.description?.message}</p>
+      //    <input type="submit" className="submitForm" />
+      // </form>
+      <form onSubmit={handleSubmit(onCreatePost)} className="create-post">
+         <div className="profile-photo">
+            <img src={user?.photoURL || ''} alt="" />
+         </div>
+         <div className="create-post__text">
+            <div className="create-post__title">
+               <input
+                  type="text"
+                  placeholder="Title..."
+                  {...register('title')}
+               />
+               <p style={{ color: 'red' }}>{errors.title?.message}</p>
+            </div>
+            <div className="create-post__body">
+               <textarea
+                  placeholder={`What's on your mind, ${user?.displayName}?`}
+                  {...register('description')}
+               />
+               <p style={{ color: 'red' }}>{errors.description?.message}</p>
+            </div>
+         </div>
+         <input type="submit" className="btn btn-primary" />
       </form>
    );
 };
