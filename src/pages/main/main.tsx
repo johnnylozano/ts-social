@@ -94,7 +94,7 @@ export const Main = () => {
                      <Post post={post} />
                   ))}
                </div>
-               {/* RIGHT */}
+               {/* RIGHT 1:19:00*/}
                <div className="right"></div>
             </div>
          )}
