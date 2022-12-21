@@ -393,6 +393,10 @@ main .container .left .profile-photo {
 }
 
 @media screen and (max-width: 320px) {
+   .navbar .profile-photo {
+      display: none;
+   }
+
    .btn {
       padding: 0.3rem 1rem;
    }
