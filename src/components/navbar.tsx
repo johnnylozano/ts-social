@@ -1,15 +1,10 @@
 import { Link } from 'react-router-dom';
 import { auth } from 'src/config/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { signOut } from 'firebase/auth';
 import { AiOutlineSearch } from 'react-icons/ai';
 
 export const Navbar = () => {
    const [user] = useAuthState(auth);
-
-   const signUserOut = async () => {
-      await signOut(auth);
-   };
 
    return (
       <nav className="navbar">

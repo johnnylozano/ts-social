@@ -38,6 +38,7 @@ export const Main = () => {
    useEffect(() => {
       getPosts();
    }, []);
+
    return (
       <main>
          {!user ? (
