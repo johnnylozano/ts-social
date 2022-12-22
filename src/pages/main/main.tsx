@@ -4,10 +4,10 @@ import { db } from 'src/config/firebase';
 import { Post } from './post';
 import { auth } from 'src/config/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { AiOutlineHome, AiOutlineCompass, AiOutlineBell } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { CreateForm } from 'src/pages/create-post/create-form';
-import { signOut } from 'firebase/auth';
+import { Profile } from './profile';
+import { Sidebar } from './sidebar';
 import { Login } from 'src/pages/login';
 
 export interface IPost {
@@ -20,10 +20,6 @@ export interface IPost {
 
 export const Main = () => {
    const [user] = useAuthState(auth);
-
-   const signUserOut = async () => {
-      await signOut(auth);
-   };
 
    const [postsList, setPostsList] = useState<IPost[] | null>(null);
    const postsRef = collection(db, 'posts');
@@ -47,47 +43,15 @@ export const Main = () => {
             <div className="container">
                {/* LEFT */}
                <div className="left">
-                  <Link to="/" className="profile">
-                     <img
-                        className="profile-photo"
-                        src={user?.photoURL || ''}
-                        alt=""
-                     />
-                     <div className="handle">
-                        <h4>{user?.displayName}</h4>
-                        <p className="text-muted">@{user?.displayName}</p>
-                     </div>
-                  </Link>
-                  <button className="btn btn-logout" onClick={signUserOut}>
-                     Log Out
-                  </button>
+                  <Profile />
 
                   {/* SIDEBAR */}
-
-                  <div className="sidebar">
-                     <Link to="/" className="menu-item">
-                        <span className="centered-icon">
-                           <AiOutlineHome />
-                        </span>
-                        <h3>Home</h3>
-                     </Link>
-                     <Link to="/" className="menu-item">
-                        <span className="centered-icon">
-                           <AiOutlineCompass />
-                        </span>
-                        <h3>Explore</h3>
-                     </Link>
-                     <Link to="/" className="menu-item">
-                        <span className="centered-icon">
-                           <AiOutlineBell />
-                        </span>
-                        <h3>Notifications</h3>
-                     </Link>
-                  </div>
+                  <Sidebar />
                </div>
+
                {/* MIDDLE */}
                <div className="middle">
-                  {/* STORIES */}
+                  {/* CREATE POST */}
                   <CreateForm />
 
                   {/* FEED */}
