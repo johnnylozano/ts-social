@@ -51,8 +51,8 @@ export const Main = () => {
                   <CreateForm />
 
                   {/* POST FEED */}
-                  {postsList?.map((post) => (
-                     <Post post={post} />
+                  {postsList?.map((post, key) => (
+                     <Post post={post} key={key} />
                   ))}
                </div>
             </div>

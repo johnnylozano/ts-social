@@ -14,7 +14,12 @@ export const Profile = () => {
    return (
       <>
          <Link to="/" className="profile">
-            <img className="profile-photo" src={user?.photoURL || ''} alt="" />
+            <img
+               className="profile-photo"
+               src={user?.photoURL || ''}
+               alt=""
+               referrerPolicy="no-referrer"
+            />
             <div className="handle">
                <h4>{user?.displayName}</h4>
                <p className="text-muted">@{user?.displayName}</p>
