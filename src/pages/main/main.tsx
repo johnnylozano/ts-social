@@ -1,13 +1,12 @@
-import { getDocs, collection } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
-import { db } from 'src/config/firebase';
-import { Post } from './post';
-import { auth } from 'src/config/firebase';
+import { getDocs, collection } from 'firebase/firestore';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
-import { CreateForm } from 'src/pages/create-post/create-form';
+import { Post } from './post';
 import { Profile } from './profile';
 import { Sidebar } from './sidebar';
+import { db } from 'src/config/firebase';
+import { auth } from 'src/config/firebase';
+import { CreateForm } from 'src/pages/create-post/create-form';
 import { Login } from 'src/pages/login';
 
 export interface IPost {
@@ -41,20 +40,17 @@ export const Main = () => {
             <Login />
          ) : (
             <div className="container">
-               {/* LEFT */}
+               {/* LEFT COLUMN */}
                <div className="left">
                   <Profile />
-
-                  {/* SIDEBAR */}
                   <Sidebar />
                </div>
 
-               {/* MIDDLE */}
+               {/* MIDDLE COLUMN */}
                <div className="middle">
-                  {/* CREATE POST */}
                   <CreateForm />
 
-                  {/* FEED */}
+                  {/* POST FEED */}
                   {postsList?.map((post) => (
                      <Post post={post} />
                   ))}
