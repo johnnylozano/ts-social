@@ -7,6 +7,9 @@
 
 # hosting
 /src/config
+.firebase/
+.firebaserc
+firebase.json
 
 # testing
 /coverage
@@ -20,6 +23,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.github/
 
 npm-debug.log*
 yarn-debug.log*
