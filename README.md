@@ -1,4 +1,4 @@
-# Rock, Paper, Scissors!
+# Konnect Social Media Website
 
 <img src="./demo/konnect-demo.gif" alt="Demo of Konnect social media app">
 
