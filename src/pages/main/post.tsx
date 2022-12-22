@@ -9,12 +9,12 @@ import {
 } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth, db } from '../../config/firebase';
+import { auth, db } from 'src/config/firebase';
 import { IPost } from './main';
 import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
-import profile10 from '../../assets/img/profile-10.jpg';
-import profile4 from '../../assets/img/profile-4.jpg';
-import profile15 from '../../assets/img/profile-15.jpg';
+import profile10 from 'src/assets/img/profile-10.jpg';
+import profile4 from 'src/assets/img/profile-4.jpg';
+import profile15 from 'src/assets/img/profile-15.jpg';
 
 interface Props {
    post: IPost;

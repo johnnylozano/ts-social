@@ -1,14 +1,14 @@
 import { getDocs, collection } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
-import { db } from '../../config/firebase';
+import { db } from 'src/config/firebase';
 import { Post } from './post';
-import { auth } from '../../config/firebase';
+import { auth } from 'src/config/firebase';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { AiOutlineHome, AiOutlineCompass, AiOutlineBell } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-import { CreateForm } from '../create-post/create-form';
+import { CreateForm } from 'src/pages/create-post/create-form';
 import { signOut } from 'firebase/auth';
-import { Login } from '../login';
+import { Login } from 'src/pages/login';
 
 export interface IPost {
    id: string;
