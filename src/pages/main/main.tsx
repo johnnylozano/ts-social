@@ -7,7 +7,7 @@ import { Sidebar } from './sidebar';
 import { db } from 'src/config/firebase';
 import { auth } from 'src/config/firebase';
 import { CreateForm } from 'src/pages/create-post/create-form';
-import { Login } from 'src/pages/login';
+import { Navigate } from 'react-router-dom';
 
 export interface IPost {
    id: string;
@@ -37,7 +37,7 @@ export const Main = () => {
    return (
       <main>
          {!user ? (
-            <Login />
+            <Navigate to="login" />
          ) : (
             <div className="container">
                {/* LEFT COLUMN */}
